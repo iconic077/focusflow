@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>FocusFlow — Daily Planner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">YOUR DAILY SYSTEM</p>
+        <h1>Focus<span>Flow</span></h1>
+        <p class="subtitle">Small steps. Clear mind. Better days.</p>
+      </section>
+
+      <section class="planner" aria-label="Task planner">
+        <div class="planner-top">
+          <div>
+            <p id="today" class="date"></p>
+            <h2>Today's priorities</h2>
+          </div>
+          <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">☀</button>
+        </div>
+
+        <form id="task-form" class="task-form">
+          <input id="task-input" type="text" maxlength="90" placeholder="What needs your attention?" autocomplete="off" required />
+          <button type="submit">Add task <span>↗</span></button>
+        </form>
+
+        <div class="summary">
+          <div class="progress-track"><div id="progress-bar"></div></div>
+          <p id="progress-text">No tasks yet — enjoy the calm.</p>
+          <button id="clear-completed" class="text-button" type="button">Clear completed</button>
+        </div>
+
+        <ul id="task-list" class="task-list" aria-live="polite"></ul>
+        <p id="empty-state" class="empty-state">Your list is clear. Add one meaningful task to begin.</p>
+      </section>
+
+      <footer>Built for focused days ✦</footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
